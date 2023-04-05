@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glauberman-Massri</title>
+    <link rel = "stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container"> 
+      <div class="container1"> 
+        <div class="col">
+          <div class="row">
+            <h1> TP2 - Explicar con datos </h1>
+            <h3>Análisis de datos correspondientes a astronautas que participaron en misiones espaciales desde 2010 hasta enero de 2020.</h3>
+            <br>
+            <p> Integrantes: Glauberman & Massri</p> 
+          </div>
+          <div class="row">
+            <a href="#chart1" style="text-decoration: none; color:white" class="enlace">
+              <div class="card">
+                <h5>Grafico 1</h5>
+              </div>
+            </a>
+            
+            <a href="#chart2" style="text-decoration: none; color:white" class="enlace">
+              <div class="card">
+                <h5>Grafico 2</h5>
+              </div>
+            </a>
+            <a href="#chart3" style="text-decoration: none; color:white" class="enlace">
+              <div class="card">
+                <h5>Grafico 3</h5>
+              </div>
+            </a>
+            <a href="#chart4" style="text-decoration: none; color:white" class="enlace">
+              <div class="card">
+                <h5>Grafico 4</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="graficos">
+        <div id="chart1">
+          <h2> <span style="color: #4b1687; font-weight: bold;">Hombres</span> <span style="color: black; font-weight: bold; font-size: large;">vs</span> <span style="color: #9290c2; font-weight: bold;">Mujeres</span></h2>
+          <h3> <span style="color: black; font-weight: bold; font-size: large;">Evolución del número de astronautas</span></h3>
+          <br>
+          <h4> En el gráfico se puede observar que en los años analizados el número de astronautas masculinos fue  </h4>
+          <h4> mayor al femenino. Sin embargo, en los últimos años esta brecha se fue achicando; la cantidad de </h4> 
+          <h4> astronautas masculinos disminuyó mientras que la femenina se mantuvo.</h4>
+          <br>
+        </div>
+      </div>
+      <div class="graficos">
+        <div id="chart2">
+          <h2> Cantidad de astronautas según nacionalidad: </h2>
+          <h3>  <span style="color: black; font-weight: bold; font-size: medium;">¿La nacionalidad influye a la hora de ser astronauta?</span></h3>
+          <br> 
+          <h4> Se puede observar una clara predominancia por parte de los Estados Unidos y Rusia, lo cual hace pensar que el asunto aeroespacial sólo</h4>
+          <h4> concierne a países del primer mundo.</h4>
+          <br>
+        </div>
+      </div>
+      <div class="graficos">
+        <div id="chart3">
+          <h2> Importancia de los cargos en el espacio </h2>
+          <br> 
+          <h4> Representación visual de las horas trabajadas por las diferentes ocupaciones en la industria aeroespacial a lo largo de los años.</h4>
+          <br>
+          <br>
+        </div>
+      </div>
+      <div class="graficos">
+        <div id="chart4">
+          <h2> El factor edad: Experiencia vs destreza </h2>
+          <br> 
+          <h4> ¿Qué es más importante, la experiencia o la habilidad? La carrera espacial requiere una combinación entre ambas, es por eso que notamos una gran concentración de astronautas en el rango etario 38-54, fuera del</h4>
+          <h4> mismo no se suele tener un balance de ambas cualidades al máximo.</h4>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.contentWindow.js"></script>
+    <script src="dataviz_1/script.js"></script>
+    <script src="dataviz_2/script.js"></script>
+    <script src="dataviz_3/script.js"></script>
+    <script src="dataviz_4/script.js"></script>
+    <script>
+      plotLine("dataviz_1/astronautas.csv", "#chart1")
+      plotBar("dataviz_2/astronautas.csv", "#chart2")
+      plotBar_3("dataviz_3/astronautas.csv", "#chart3")
+      plotBar_4("dataviz_4/astronautas.csv", "#chart4")
+    </script>
+  </body>
+</html>
